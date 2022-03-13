@@ -31,7 +31,6 @@ public class Radio {
         if (currentRadioStation < minRadioStation) {
             this.currentRadioStation = maxRadioStation;
             return;
-
         }
         this.currentRadioStation = currentRadioStation;
     }
