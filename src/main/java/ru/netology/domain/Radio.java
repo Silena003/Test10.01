@@ -3,13 +3,13 @@ package ru.netology.domain;
 public class Radio {
 
     String name;
+    boolean on;
     private int currentRadioStation;
     private int maxRadioStation;
     private int minRadioStation;
     private int currentVolume;
     private int minCurrentVolume;
     private int maxCurrentVolume;
-    boolean on;
 
     public String getName() {
         return name;
@@ -33,8 +33,8 @@ public class Radio {
             return;
 
         }
-            this.currentRadioStation = currentRadioStation;
-        }
+        this.currentRadioStation = currentRadioStation;
+    }
 
 
     public int getMaxRadioStation() {
@@ -65,8 +65,8 @@ public class Radio {
         if (currentVolume < minCurrentVolume) {
             return;
         }
-            this.currentVolume = currentVolume + 1;
-        }
+        this.currentVolume = currentVolume + 1;
+    }
 
     public int getMinCurrentVolume() {
         return minCurrentVolume;
