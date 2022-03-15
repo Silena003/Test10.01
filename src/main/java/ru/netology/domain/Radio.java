@@ -32,6 +32,15 @@ public class Radio {
             this.currentRadioStation = maxRadioStation;
             return;
         }
+        if (currentRadioStation < maxRadioStation) {
+            currentRadioStation = currentRadioStation + 1;
+
+        }
+        if (currentRadioStation <= maxRadioStation) {
+            currentRadioStation = currentRadioStation - 1;
+
+        }
+
         this.currentRadioStation = currentRadioStation;
     }
 
@@ -64,7 +73,16 @@ public class Radio {
         if (currentVolume < minCurrentVolume) {
             return;
         }
-        this.currentVolume = currentVolume + 1;
+        if (currentVolume < maxCurrentVolume) {
+            currentVolume = currentVolume + 1;
+        }
+
+        if (currentVolume <= maxCurrentVolume) {
+            currentVolume = currentVolume - 1;
+
+        }
+
+        this.currentVolume = currentVolume;
     }
 
     public int getMinCurrentVolume() {
